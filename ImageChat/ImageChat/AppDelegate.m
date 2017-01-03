@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ICImageTabBarViewController.h"
 #import "UIColor+ICHex.h"
-#import "Macro.h"
+//#import "Macro.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 

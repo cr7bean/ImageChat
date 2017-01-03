@@ -10,11 +10,6 @@
 		8AA620EF7824BE93B1F87739 /* Pods_ImageChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4715723E8AED61F6803E82A /* Pods_ImageChat.framework */; };
 		FD55E4511E1A497A00C9F489 /* ImageChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4501E1A497A00C9F489 /* ImageChatTests.m */; };
 		FD55E45C1E1A497A00C9F489 /* ImageChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E45B1E1A497A00C9F489 /* ImageChatUITests.m */; };
-		FD55E4921E1A60D500C9F489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E48B1E1A60D500C9F489 /* AppDelegate.m */; };
-		FD55E4931E1A60D500C9F489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD55E48C1E1A60D500C9F489 /* Assets.xcassets */; };
-		FD55E4951E1A60D500C9F489 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD55E4901E1A60D500C9F489 /* Info.plist */; };
-		FD55E4961E1A60D500C9F489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4911E1A60D500C9F489 /* main.m */; };
-		FD55E4991E1A60EA00C9F489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD55E4971E1A60EA00C9F489 /* LaunchScreen.storyboard */; };
 		FD55E49F1E1A630A00C9F489 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49A1E1A630A00C9F489 /* AFNetworking.framework */; };
 		FD55E4A01E1A630A00C9F489 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49B1E1A630A00C9F489 /* CocoaLumberjack.framework */; };
 		FD55E4A11E1A630A00C9F489 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49C1E1A630A00C9F489 /* Masonry.framework */; };
@@ -24,6 +19,12 @@
 		FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4AB1E1A672200C9F489 /* ICImageInfoViewController.m */; };
 		FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4B11E1A6C8E00C9F489 /* ICImageTabBarViewController.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
+		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
+		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
+		FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C50201E1AA75F00AC2CB9 /* main.m */; };
+		FD5C50261E1AA76700AC2CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5C50241E1AA76700AC2CB9 /* LaunchScreen.storyboard */; };
+		FD5C50291E1AA98300AC2CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C50281E1AA98300AC2CB9 /* Assets.xcassets */; };
+		FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FA0361E1BF660005BC2DF /* ICImageCardTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +57,6 @@
 		FD55E4571E1A497A00C9F489 /* ImageChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55E45B1E1A497A00C9F489 /* ImageChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageChatUITests.m; sourceTree = "<group>"; };
 		FD55E45D1E1A497A00C9F489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD55E48A1E1A60D500C9F489 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageChat/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		FD55E48B1E1A60D500C9F489 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageChat/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		FD55E48C1E1A60D500C9F489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ImageChat/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		FD55E4901E1A60D500C9F489 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageChat/Info.plist; sourceTree = SOURCE_ROOT; };
-		FD55E4911E1A60D500C9F489 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageChat/main.m; sourceTree = SOURCE_ROOT; };
-		FD55E4981E1A60EA00C9F489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ImageChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		FD55E49A1E1A630A00C9F489 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		FD55E49B1E1A630A00C9F489 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "Pods/../build/Debug-iphoneos/CocoaLumberjack/CocoaLumberjack.framework"; sourceTree = "<group>"; };
 		FD55E49C1E1A630A00C9F489 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = "Pods/../build/Debug-iphoneos/Masonry/Masonry.framework"; sourceTree = "<group>"; };
@@ -76,6 +71,15 @@
 		FD5C50161E1A82F600AC2CB9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		FD5C50191E1A850B00AC2CB9 /* UIColor+ICHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ICHex.h"; sourceTree = "<group>"; };
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
+		FD5C501D1E1AA75F00AC2CB9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageChat/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageChat/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		FD5C501F1E1AA75F00AC2CB9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageChat/Info.plist; sourceTree = SOURCE_ROOT; };
+		FD5C50201E1AA75F00AC2CB9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageChat/main.m; sourceTree = SOURCE_ROOT; };
+		FD5C50251E1AA76700AC2CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ImageChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		FD5C50271E1AA7AE00AC2CB9 /* ImageChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageChat-Prefix.pch"; sourceTree = "<group>"; };
+		FD5C50281E1AA98300AC2CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ImageChat/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		FD5FA0351E1BF660005BC2DF /* ICImageCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCardTableViewCell.h; sourceTree = "<group>"; };
+		FD5FA0361E1BF660005BC2DF /* ICImageCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCardTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,20 +186,6 @@
 			path = ImageChat;
 			sourceTree = "<group>";
 		};
-		FD55E4781E1A55D900C9F489 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				FD55E48A1E1A60D500C9F489 /* AppDelegate.h */,
-				FD55E48B1E1A60D500C9F489 /* AppDelegate.m */,
-				FD55E4971E1A60EA00C9F489 /* LaunchScreen.storyboard */,
-				FD55E48C1E1A60D500C9F489 /* Assets.xcassets */,
-				FD55E4901E1A60D500C9F489 /* Info.plist */,
-				FD55E4911E1A60D500C9F489 /* main.m */,
-			);
-			name = AppDelegate;
-			path = Application;
-			sourceTree = "<group>";
-		};
 		FD55E4801E1A56EB00C9F489 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,11 +235,11 @@
 		FD55E4881E1A5FC400C9F489 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FD5C501C1E1AA74F00AC2CB9 /* AppDelegate */,
 				FD5C50171E1A845E00AC2CB9 /* Category */,
 				FD55E4831E1A5D1B00C9F489 /* Macro */,
 				FD55E4821E1A5A2A00C9F489 /* Utility */,
 				FD55E4801E1A56EB00C9F489 /* Network */,
-				FD55E4781E1A55D900C9F489 /* AppDelegate */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -268,6 +258,8 @@
 		FD55E4A41E1A665400C9F489 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD5FA0351E1BF660005BC2DF /* ICImageCardTableViewCell.h */,
+				FD5FA0361E1BF660005BC2DF /* ICImageCardTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +298,20 @@
 			children = (
 			);
 			path = SendImage;
+			sourceTree = "<group>";
+		};
+		FD5C501C1E1AA74F00AC2CB9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FD5C50281E1AA98300AC2CB9 /* Assets.xcassets */,
+				FD5C50241E1AA76700AC2CB9 /* LaunchScreen.storyboard */,
+				FD5C501D1E1AA75F00AC2CB9 /* AppDelegate.h */,
+				FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */,
+				FD5C501F1E1AA75F00AC2CB9 /* Info.plist */,
+				FD5C50201E1AA75F00AC2CB9 /* main.m */,
+				FD5C50271E1AA7AE00AC2CB9 /* ImageChat-Prefix.pch */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,9 +421,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD55E4991E1A60EA00C9F489 /* LaunchScreen.storyboard in Resources */,
-				FD55E4931E1A60D500C9F489 /* Assets.xcassets in Resources */,
-				FD55E4951E1A60D500C9F489 /* Info.plist in Resources */,
+				FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */,
+				FD5C50291E1AA98300AC2CB9 /* Assets.xcassets in Resources */,
+				FD5C50261E1AA76700AC2CB9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +500,9 @@
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,
 				FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */,
 				FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */,
-				FD55E4961E1A60D500C9F489 /* main.m in Sources */,
-				FD55E4921E1A60D500C9F489 /* AppDelegate.m in Sources */,
+				FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */,
+				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
+				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,10 +538,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD55E4971E1A60EA00C9F489 /* LaunchScreen.storyboard */ = {
+		FD5C50241E1AA76700AC2CB9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FD55E4981E1A60EA00C9F489 /* Base */,
+				FD5C50251E1AA76700AC2CB9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -636,6 +643,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/LONG/Documents/APP/ImageChat/ImageChat/ImageChat/AppDelegate/ImageChat-Prefix.pch";
 				INFOPLIST_FILE = ImageChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +665,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/LONG/Documents/APP/ImageChat/ImageChat/ImageChat/AppDelegate/ImageChat-Prefix.pch";
 				INFOPLIST_FILE = ImageChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
