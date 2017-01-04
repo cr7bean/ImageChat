@@ -13,8 +13,6 @@
 		FD55E49F1E1A630A00C9F489 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49A1E1A630A00C9F489 /* AFNetworking.framework */; };
 		FD55E4A01E1A630A00C9F489 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49B1E1A630A00C9F489 /* CocoaLumberjack.framework */; };
 		FD55E4A11E1A630A00C9F489 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49C1E1A630A00C9F489 /* Masonry.framework */; };
-		FD55E4A21E1A630A00C9F489 /* Pods_ImageChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49D1E1A630A00C9F489 /* Pods_ImageChatTests.framework */; };
-		FD55E4A31E1A630A00C9F489 /* Pods_ImageChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49E1E1A630A00C9F489 /* Pods_ImageChatUITests.framework */; };
 		FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4A81E1A66FB00C9F489 /* ICImageListViewController.m */; };
 		FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4AB1E1A672200C9F489 /* ICImageInfoViewController.m */; };
 		FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4B11E1A6C8E00C9F489 /* ICImageTabBarViewController.m */; };
@@ -90,8 +88,6 @@
 				FD55E49F1E1A630A00C9F489 /* AFNetworking.framework in Frameworks */,
 				FD55E4A01E1A630A00C9F489 /* CocoaLumberjack.framework in Frameworks */,
 				FD55E4A11E1A630A00C9F489 /* Masonry.framework in Frameworks */,
-				FD55E4A21E1A630A00C9F489 /* Pods_ImageChatTests.framework in Frameworks */,
-				FD55E4A31E1A630A00C9F489 /* Pods_ImageChatUITests.framework in Frameworks */,
 				8AA620EF7824BE93B1F87739 /* Pods_ImageChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

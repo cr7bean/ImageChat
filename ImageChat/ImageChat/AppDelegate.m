@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "ICImageTabBarViewController.h"
 #import "UIColor+ICHex.h"
-//#import "Macro.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Macro.h"
+//#import <CocoaLumberjack/CocoaLumberjack.h>
+//@import CocoaLumberjack;
 
 
 
@@ -52,6 +53,8 @@
 - (void)configurateLogSystem {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [DDLog addLogger:[DDASLLogger sharedInstance]];
+    DDLogDebug(@"Did finish launching");
+    
 }
 
 
