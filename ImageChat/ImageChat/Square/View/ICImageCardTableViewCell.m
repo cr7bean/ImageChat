@@ -32,6 +32,7 @@ static const CGFloat kLabelInerSpace = 15;
 @interface ICImageCardTableViewCell ()
 
 @property (nonatomic, strong) UIView *groupView;
+@property (nonatomic, strong) UIView *shadowView;
 @property (nonatomic, strong) UIImageView *cardImageView;
 @property (nonatomic, strong) UILabel *titleLable;
 @property (nonatomic, strong) UIView *blankView;
@@ -65,13 +66,15 @@ static const CGFloat kLabelInerSpace = 15;
 
 - (void)configurateSubviews {
     self.groupView = [UIView new];
+    self.shadowView = [UIView new];
     self.cardImageView = [UIImageView new];
     self.blankView = [UIView new];
     self.titleLable = [UILabel new];
     self.dateLable = [UILabel new];
     self.subtitleLabel = [UILabel new];
     
-    [self.contentView addSubview:self.groupView];
+    [self.contentView addSubview:self.shadowView];
+    [self.shadowView addSubview:self.groupView];
     [self.groupView addSubview:self.cardImageView];
     [self.groupView addSubview:self.blankView];
     [self.cardImageView addSubview:self.titleLable];
@@ -81,11 +84,16 @@ static const CGFloat kLabelInerSpace = 15;
     self.backgroundColor = [UIColor colorWithHex:kBackgroundColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    self.groupView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.groupView.layer.shadowOffset = CGSizeMake(1, 1);
-    self.groupView.layer.shadowRadius = 4.0;
     self.groupView.layer.cornerRadius = 10;
     self.groupView.layer.masksToBounds = YES;
+    
+    self.shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.shadowView.layer.shadowOpacity = 0.3;
+    self.shadowView.layer.shadowRadius = 5;
+//    self.shadowView.layer.shadowOffset = CGSizeMake(0, -1);
+    self.shadowView.layer.shouldRasterize = YES;
+    self.shadowView.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    
     self.blankView.backgroundColor = [UIColor whiteColor];
     
     self.titleLable.textColor = [UIColor whiteColor];
@@ -100,11 +108,14 @@ static const CGFloat kLabelInerSpace = 15;
 
 - (void)makeConstraints {
     
-    [self.groupView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(kTop);
         make.left.mas_equalTo(kLeft);
         make.right.mas_equalTo(kRight);
         make.bottom.mas_equalTo(0);
+    }];
+    [self.groupView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     [self.cardImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
@@ -129,6 +140,15 @@ static const CGFloat kLabelInerSpace = 15;
         make.bottom.mas_equalTo(kSubtitleBottom);
     }];
     
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.groupView.bounds];
+    self.groupView.layer.shadowPath = path.CGPath;
+    
+    wangLogString(NSStringFromCGRect(path.bounds));
 }
 
 #pragma mark - Cell content

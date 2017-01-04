@@ -25,6 +25,7 @@
 		FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FA0361E1BF660005BC2DF /* ICImageCardTableViewCell.m */; };
 		FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6608871E1D008D0035D03E /* UIView+ICDebug.m */; };
 		FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66088A1E1D09130035D03E /* ICImageCardModel.m */; };
+		FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66088F1E1D0E810035D03E /* RRFPSBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		FD6608871E1D008D0035D03E /* UIView+ICDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ICDebug.m"; sourceTree = "<group>"; };
 		FD6608891E1D09130035D03E /* ICImageCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCardModel.h; sourceTree = "<group>"; };
 		FD66088A1E1D09130035D03E /* ICImageCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCardModel.m; sourceTree = "<group>"; };
+		FD66088E1E1D0E810035D03E /* RRFPSBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFPSBar.h; sourceTree = "<group>"; };
+		FD66088F1E1D0E810035D03E /* RRFPSBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFPSBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,7 @@
 		FD55E4881E1A5FC400C9F489 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FD66088C1E1D0DB10035D03E /* Vendor */,
 				FD5C501C1E1AA74F00AC2CB9 /* AppDelegate */,
 				FD5C50171E1A845E00AC2CB9 /* Category */,
 				FD55E4831E1A5D1B00C9F489 /* Macro */,
@@ -318,6 +322,23 @@
 				FD5C50271E1AA7AE00AC2CB9 /* ImageChat-Prefix.pch */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FD66088C1E1D0DB10035D03E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FD66088D1E1D0E810035D03E /* RRFPSBar */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FD66088D1E1D0E810035D03E /* RRFPSBar */ = {
+			isa = PBXGroup;
+			children = (
+				FD66088E1E1D0E810035D03E /* RRFPSBar.h */,
+				FD66088F1E1D0E810035D03E /* RRFPSBar.m */,
+			);
+			path = RRFPSBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */,
+				FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */,
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,
 				FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */,
 				FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */,

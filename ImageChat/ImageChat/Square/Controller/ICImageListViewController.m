@@ -13,6 +13,8 @@
 
 static NSString *cellIdentify = @"imageCardCell";
 static const NSUInteger kBackgroundColor = 0xE7E7E7;
+static const NSUInteger kTableViewBottom = 15;
+static const CGFloat kRowHeight = 130;
 
 @interface ICImageListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -26,7 +28,7 @@ static const NSUInteger kBackgroundColor = 0xE7E7E7;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.estimatedRowHeight = 70;
+    self.tableView.estimatedRowHeight = kRowHeight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +50,7 @@ static const NSUInteger kBackgroundColor = 0xE7E7E7;
         [_tableView registerClass:[ICImageCardTableViewCell class] forCellReuseIdentifier:cellIdentify];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.backgroundColor = [UIColor colorWithHex:kBackgroundColor];
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, kTableViewBottom, 0);
     }
     return _tableView;
 }

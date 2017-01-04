@@ -10,8 +10,11 @@
 #import "ICImageTabBarViewController.h"
 #import "UIColor+ICHex.h"
 #import "Macro.h"
-//#import <CocoaLumberjack/CocoaLumberjack.h>
-//@import CocoaLumberjack;
+
+#ifndef __OPTIMIZE__
+#import "RRFPSBar.h"
+#endif
+
 
 
 
@@ -55,6 +58,9 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     DDLogDebug(@"Did finish launching");
     
+    #ifndef __OPTIMIZE__
+        [[RRFPSBar sharedInstance] setHidden:NO];
+    #endif
 }
 
 
