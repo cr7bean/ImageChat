@@ -10,14 +10,22 @@
 #define ImageChat_Prefix_pch
 
 
+// Log
 @import CocoaLumberjack;
-
-
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else
 static const DDLogLevel ddLogLevel = DDLogLevelWarning;
 #endif
 
+#define wangLogString(arg) NSLog(@"%@", arg);
+
+
+// View
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#import "UIView+ICDebug.h"
 
 #endif /* ImageChat_Prefix_pch */

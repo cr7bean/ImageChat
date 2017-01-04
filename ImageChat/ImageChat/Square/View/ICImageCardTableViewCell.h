@@ -10,4 +10,6 @@
 
 @interface ICImageCardTableViewCell : UITableViewCell
 
+- (void)configurateCellContent;
+
 @end

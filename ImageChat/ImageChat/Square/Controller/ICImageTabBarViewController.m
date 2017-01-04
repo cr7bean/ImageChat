@@ -33,7 +33,8 @@
 
 - (void)encapsulateTabBarControllers {
     ICImageListViewController *imageListController = [ICImageListViewController new];
-    imageListController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"广场" image: [UIImage imageNamed:@"tab-icon1"]tag:0];
+    imageListController.tabBarItem = [[UITabBarItem alloc] initWithTitle: nil
+                                                                   image: [UIImage imageNamed:@"tab-icon1"]tag:0];
     UINavigationController *squareNavigationController = [[UINavigationController alloc] initWithRootViewController:imageListController];
     
     self.viewControllers = @[squareNavigationController];
