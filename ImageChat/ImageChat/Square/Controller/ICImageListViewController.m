@@ -12,30 +12,35 @@
 #import "UIColor+ICHex.h"
 
 static NSString *cellIdentify = @"imageCardCell";
+static NSString *kTitle = @"热门";
 static const NSUInteger kBackgroundColor = 0xE7E7E7;
 static const NSUInteger kTableViewBottom = 15;
 static const CGFloat kRowHeight = 130;
+static const CGSize kImageSize = {14, 16};
+static const CGFloat kInnerSpace = 3;
 
 @interface ICImageListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *headView;
 
 @end
 
 @implementation ICImageListViewController
 
-#pragma makr - Life cycle
+#pragma mark - Life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.estimatedRowHeight = kRowHeight;
+    self.navigationItem.titleView = self.headView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-#pragma Getter
+#pragma mark - Getter
 
 - (UITableView *)tableView {
     if (!_tableView) {
@@ -55,7 +60,30 @@ static const CGFloat kRowHeight = 130;
     return _tableView;
 }
 
-#pragma TableView DataSource
+- (UIView *)headView {
+    if (!_headView) {
+        _headView = [UIView new];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hot"]];
+        UILabel *textLabel = [UILabel new];
+        textLabel.textColor = [UIColor whiteColor];
+        textLabel.font = [UIFont systemFontOfSize:18];
+        textLabel.text = kTitle;
+        [_headView addSubview:imageView];
+        [_headView addSubview:textLabel];
+
+        imageView.size = kImageSize;
+        textLabel.size = CGSizeMake(textLabel.intrinsicWidth, textLabel.intrinsicHeight);
+        
+        CGFloat width = imageView.width + textLabel.width;
+        CGFloat height = MAX(imageView.height, textLabel.height);
+        _headView.bounds = CGRectMake(0, 0, width, height);
+        imageView.center = CGPointMake(imageView.width/2, height/2);
+        textLabel.center = CGPointMake(imageView.width+textLabel.width/2+kInnerSpace, height/2);
+    }
+    return _headView;
+}
+
+#pragma mark - TableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -73,6 +101,12 @@ static const CGFloat kRowHeight = 130;
     }
     [cell configurateCellContent];
     return cell;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 @end

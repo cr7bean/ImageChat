@@ -27,5 +27,39 @@
 }
 
 
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+- (CGFloat)x {
+    return self.origin.x;
+}
+- (CGFloat)y {
+    return self.origin.y;
+}
+
+
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (CGFloat)height {
+    return self.size.height;
+}
+- (CGFloat)width {
+    return self.size.width;
+}
+
+- (CGFloat)intrinsicHeight {
+    return self.intrinsicContentSize.height;
+}
+- (CGFloat)intrinsicWidth {
+    return self.intrinsicContentSize.width;
+}
+
+
+- (void)setSize:(CGSize)size {
+    self.frame = CGRectMake(self.x, self.y, size.width, size.height);
+}
+
 
 @end

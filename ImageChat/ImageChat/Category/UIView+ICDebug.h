@@ -14,4 +14,16 @@
 - (NSString *)debugSize;
 - (NSString *)debugIntrinsicSize;
 
+- (CGSize)size;
+- (CGPoint)origin;
+- (CGFloat)height;
+- (CGFloat)width;
+- (CGFloat)x;
+- (CGFloat)y;
+
+- (CGFloat)intrinsicHeight;
+- (CGFloat)intrinsicWidth;
+
+- (void)setSize:(CGSize)size;
+
 @end

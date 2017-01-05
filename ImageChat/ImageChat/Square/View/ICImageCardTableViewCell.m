@@ -12,22 +12,22 @@
 #import "UIColor+ICHex.h"
 
 
-static const NSUInteger kTitleFontSize = 20;
-static const NSUInteger kSubtitleFontSize = 15;
+static const NSUInteger kTitleFontSize = 22;
+static const NSUInteger kSubtitleFontSize = 13;
 static const NSUInteger kDateFontSize = 13;
 
 static const NSUInteger kDateFontColor = 0xFEAE53;
 static const NSUInteger kSubtitleColor = 0xB1B1B1;
 static const NSUInteger kBackgroundColor = 0xE7E7E7;
 
-static const CGFloat kTop = 15;
-static const CGFloat kLeft = 10;
-static const CGFloat kRight = -10;
-static const CGFloat kImageScale = 0.5;
+static const CGFloat kTop = 10;
+static const CGFloat kLeft = 8.5;
+static const CGFloat kRight = -8.5;
+static const CGFloat kImageScale = 0.47;
 static const CGFloat kLabelLeft = 20;
 static const CGFloat kTitleBottom = -10;
-static const CGFloat kSubtitleBottom = -20;
-static const CGFloat kLabelInerSpace = 15;
+static const CGFloat kSubtitleBottom = -15;
+static const CGFloat kLabelInerSpace = 10;
 
 @interface ICImageCardTableViewCell ()
 
@@ -84,7 +84,7 @@ static const CGFloat kLabelInerSpace = 15;
     self.backgroundColor = [UIColor colorWithHex:kBackgroundColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    self.groupView.layer.cornerRadius = 10;
+    self.groupView.layer.cornerRadius = 5;
     self.groupView.layer.masksToBounds = YES;
     
     self.shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -147,8 +147,6 @@ static const CGFloat kLabelInerSpace = 15;
     
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.groupView.bounds];
     self.groupView.layer.shadowPath = path.CGPath;
-    
-    wangLogString(NSStringFromCGRect(path.bounds));
 }
 
 #pragma mark - Cell content

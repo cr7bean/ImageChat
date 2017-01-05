@@ -16,6 +16,9 @@
 		FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4A81E1A66FB00C9F489 /* ICImageListViewController.m */; };
 		FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4AB1E1A672200C9F489 /* ICImageInfoViewController.m */; };
 		FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4B11E1A6C8E00C9F489 /* ICImageTabBarViewController.m */; };
+		FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E4B1E1E249A00E27045 /* ICImageInfoMainView.m */; };
+		FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */; };
+		FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
 		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
 		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
@@ -69,6 +72,12 @@
 		FD55E4AB1E1A672200C9F489 /* ICImageInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoViewController.m; sourceTree = "<group>"; };
 		FD55E4B01E1A6C8E00C9F489 /* ICImageTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageTabBarViewController.h; sourceTree = "<group>"; };
 		FD55E4B11E1A6C8E00C9F489 /* ICImageTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageTabBarViewController.m; sourceTree = "<group>"; };
+		FD579E4A1E1E249A00E27045 /* ICImageInfoMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageInfoMainView.h; sourceTree = "<group>"; };
+		FD579E4B1E1E249A00E27045 /* ICImageInfoMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoMainView.m; sourceTree = "<group>"; };
+		FD579E4D1E1E24F300E27045 /* ICImageInfoToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageInfoToolbarView.h; sourceTree = "<group>"; };
+		FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoToolbarView.m; sourceTree = "<group>"; };
+		FD579E501E1E259200E27045 /* ICImageInfoMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageInfoMenuButton.h; sourceTree = "<group>"; };
+		FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoMenuButton.m; sourceTree = "<group>"; };
 		FD5C50161E1A82F600AC2CB9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		FD5C50191E1A850B00AC2CB9 /* UIColor+ICHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ICHex.h"; sourceTree = "<group>"; };
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
@@ -266,6 +275,12 @@
 			children = (
 				FD5FA0351E1BF660005BC2DF /* ICImageCardTableViewCell.h */,
 				FD5FA0361E1BF660005BC2DF /* ICImageCardTableViewCell.m */,
+				FD579E4A1E1E249A00E27045 /* ICImageInfoMainView.h */,
+				FD579E4B1E1E249A00E27045 /* ICImageInfoMainView.m */,
+				FD579E4D1E1E24F300E27045 /* ICImageInfoToolbarView.h */,
+				FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */,
+				FD579E501E1E259200E27045 /* ICImageInfoMenuButton.h */,
+				FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,12 +543,15 @@
 				FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */,
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,
 				FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */,
+				FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */,
 				FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */,
+				FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */,
 				FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */,
 				FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */,
 				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
 				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
 				FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */,
+				FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

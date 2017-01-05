@@ -35,8 +35,9 @@
     ICImageListViewController *imageListController = [ICImageListViewController new];
     imageListController.tabBarItem = [[UITabBarItem alloc] initWithTitle: nil
                                                                    image: [UIImage imageNamed:@"tab-icon1"]tag:0];
-    UINavigationController *squareNavigationController = [[UINavigationController alloc] initWithRootViewController:imageListController];
     
+    UINavigationController *squareNavigationController = [[UINavigationController alloc] initWithRootViewController:imageListController];
+    self.tabBar.itemPositioning = UITabBarItemPositioningFill;
     self.viewControllers = @[squareNavigationController];
     
 }
