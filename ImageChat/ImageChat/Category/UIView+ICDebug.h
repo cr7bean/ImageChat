@@ -10,20 +10,16 @@
 
 @interface UIView (ICDebug)
 
-- (NSString *)debugFrame;
-- (NSString *)debugSize;
-- (NSString *)debugIntrinsicSize;
-
-- (CGSize)size;
-- (CGPoint)origin;
-- (CGFloat)height;
-- (CGFloat)width;
-- (CGFloat)x;
-- (CGFloat)y;
+- (CGSize)ic_size;
+- (CGPoint)ic_origin;
+- (CGFloat)ic_height;
+- (CGFloat)ic_width;
+- (CGFloat)ic_x;
+- (CGFloat)ic_y;
 
 - (CGFloat)ic_intrinsicHeight;
 - (CGFloat)ic_intrinsicWidth;
 
-- (void)setSize:(CGSize)size;
+- (void)setIc_size:(CGSize)size;
 
 @end

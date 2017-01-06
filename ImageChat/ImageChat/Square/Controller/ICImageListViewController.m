@@ -72,14 +72,14 @@ static const CGFloat kInnerSpace = 3;
         [_headView addSubview:imageView];
         [_headView addSubview:textLabel];
 
-        imageView.size = kImageSize;
-        textLabel.size = CGSizeMake(textLabel.ic_intrinsicWidth, textLabel.ic_intrinsicHeight);
+        imageView.ic_size = kImageSize;
+        textLabel.ic_size = CGSizeMake(textLabel.ic_intrinsicWidth, textLabel.ic_intrinsicHeight);
         
-        CGFloat width = imageView.width + textLabel.width;
-        CGFloat height = MAX(imageView.height, textLabel.height);
+        CGFloat width = imageView.ic_width + textLabel.ic_width;
+        CGFloat height = MAX(imageView.ic_height, textLabel.ic_height);
         _headView.bounds = CGRectMake(0, 0, width, height);
-        imageView.center = CGPointMake(imageView.width/2, height/2);
-        textLabel.center = CGPointMake(imageView.width+textLabel.width/2+kInnerSpace, height/2);
+        imageView.center = CGPointMake(imageView.ic_width/2, height/2);
+        textLabel.center = CGPointMake(imageView.ic_width+textLabel.ic_width/2+kInnerSpace, height/2);
     }
     return _headView;
 }

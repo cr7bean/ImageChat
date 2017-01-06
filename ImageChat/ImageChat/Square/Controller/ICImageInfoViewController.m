@@ -10,8 +10,10 @@
 #import "ICImageInfoViewController.h"
 #import "ICImageInfoMainView.h"
 #import "ICImageInfoToolbarView.h"
+#import "UIViewController+ICTitleView.h"
 
 static NSString *kTitle = @"详情";
+static const CGFloat kToolbarHeight = 49;
 
 @interface ICImageInfoViewController ()<ICImageInfoToolbarViewDelegate>
 
@@ -39,19 +41,21 @@ static NSString *kTitle = @"详情";
 }
 
 #pragma mark - Configurate Subviews
-
+//TODO: scrollview
 - (void)configurateSubviews {
+    [self ic_titleViewWithText:kTitle];
     self.mainView = [ICImageInfoMainView new];
     self.toolbarView = [ICImageInfoToolbarView new];
     self.toolbarView.delegate = self;
     [self.view addSubview:self.mainView];
     [self.view addSubview:self.toolbarView];
-    
     [self.toolbarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
-        make.height.mas_equalTo(49);
+        make.height.mas_equalTo(kToolbarHeight);
     }];
 }
+
+
 
 #pragma mark - ICImageInfoToolbarViewDelegate
 
@@ -76,7 +80,9 @@ static NSString *kTitle = @"详情";
     }
 }
 
-# pragma mark Toolbar Action
+# pragma mark - Toolbar Action
+
+//TODO: action
 
 - (void)collect {
     

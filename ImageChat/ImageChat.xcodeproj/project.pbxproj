@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8AA620EF7824BE93B1F87739 /* Pods_ImageChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4715723E8AED61F6803E82A /* Pods_ImageChat.framework */; };
+		FD2F16751E1FEC7500C13EDF /* UIViewController+ICTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */; };
 		FD55E4511E1A497A00C9F489 /* ImageChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4501E1A497A00C9F489 /* ImageChatTests.m */; };
 		FD55E45C1E1A497A00C9F489 /* ImageChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E45B1E1A497A00C9F489 /* ImageChatUITests.m */; };
 		FD55E49F1E1A630A00C9F489 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD55E49A1E1A630A00C9F489 /* AFNetworking.framework */; };
@@ -54,6 +55,8 @@
 		752627F643F2507066D38DB5 /* Pods-ImageChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageChat/Pods-ImageChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D4715723E8AED61F6803E82A /* Pods_ImageChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38C34F20693C5F33FDD497 /* Pods_ImageChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2F16731E1FEC7500C13EDF /* UIViewController+ICTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ICTitleView.h"; sourceTree = "<group>"; };
+		FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ICTitleView.m"; sourceTree = "<group>"; };
 		FD55E4331E1A497900C9F489 /* ImageChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55E44C1E1A497A00C9F489 /* ImageChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55E4501E1A497A00C9F489 /* ImageChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageChatTests.m; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 				FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */,
 				FD6608861E1D008D0035D03E /* UIView+ICDebug.h */,
 				FD6608871E1D008D0035D03E /* UIView+ICDebug.m */,
+				FD2F16731E1FEC7500C13EDF /* UIViewController+ICTitleView.h */,
+				FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */,
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,
 				FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */,
+				FD2F16751E1FEC7500C13EDF /* UIViewController+ICTitleView.m in Sources */,
 				FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */,
 				FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */,
 				FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */,

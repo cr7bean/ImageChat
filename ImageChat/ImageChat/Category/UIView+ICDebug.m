@@ -10,43 +10,27 @@
 
 @implementation UIView (ICDebug)
 
-- (NSString *)debugFrame {
-    
-    NSString *frameString = [NSString stringWithFormat:@"%@:%@", NSStringFromClass([self class]), NSStringFromCGRect(self.frame)];
-    return frameString;
-}
-- (NSString *)debugSize {
-    NSString *sizeString = [NSString stringWithFormat:@"%@:%@", NSStringFromClass([self class]), NSStringFromCGSize(self.frame.size)];
-    DDLogDebug(@"size: %@", sizeString);
-    return sizeString;
-}
-- (NSString *)debugIntrinsicSize {
-    NSString *intrinsicSizeString = [NSString stringWithFormat:@"%@:%@", NSStringFromClass([self class]), NSStringFromCGSize(self.intrinsicContentSize)];
-    DDLogDebug(@"intrinsicSize: %@", intrinsicSizeString);
-    return intrinsicSizeString;
-}
 
-
-- (CGPoint)origin {
+- (CGPoint)ic_origin {
     return self.frame.origin;
 }
-- (CGFloat)x {
-    return self.origin.x;
+- (CGFloat)ic_x {
+    return self.ic_origin.x;
 }
-- (CGFloat)y {
-    return self.origin.y;
+- (CGFloat)ic_y {
+    return self.ic_origin.y;
 }
 
 
-- (CGSize)size {
+- (CGSize)ic_size {
     return self.frame.size;
 }
 
-- (CGFloat)height {
-    return self.size.height;
+- (CGFloat)ic_height {
+    return self.ic_size.height;
 }
-- (CGFloat)width {
-    return self.size.width;
+- (CGFloat)ic_width {
+    return self.ic_size.width;
 }
 
 - (CGFloat)ic_intrinsicHeight {
@@ -56,9 +40,8 @@
     return self.intrinsicContentSize.width;
 }
 
-
-- (void)setSize:(CGSize)size {
-    self.frame = CGRectMake(self.x, self.y, size.width, size.height);
+- (void)setIc_size:(CGSize)size {
+    self.frame = CGRectMake(self.ic_x, self.ic_y, size.width, size.height);
 }
 
 

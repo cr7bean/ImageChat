@@ -38,7 +38,7 @@ static const CGFloat kInnerSpace = 5;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.imageView.size = kImageSize;
+    self.imageView.ic_size = kImageSize;
     self.imageEdgeInsets = UIEdgeInsetsMake(0, -kInnerSpace, 0, kInnerSpace);
     self.contentEdgeInsets = UIEdgeInsetsMake(0, kInnerSpace, 0, 0);
 }
