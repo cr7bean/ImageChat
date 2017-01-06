@@ -24,7 +24,7 @@ static const CGFloat kInnerSpace = 5;
         [self setTitle:title forState:UIControlStateNormal];
         [self setImage:image forState:UIControlStateNormal];
         self.imageView.size = kImageSize;
-        self.titleLabel.textColor = [UIColor colorWithHex:kTitleColor];
+        self.titleLabel.textColor = [UIColor ic_colorWithHex:kTitleColor];
         self.titleLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
     }
     return self;

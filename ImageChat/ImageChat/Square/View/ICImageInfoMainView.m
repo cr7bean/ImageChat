@@ -17,7 +17,7 @@ static const NSUInteger kLineViewColor = 0x979797;
 
 static const CGFloat kAvatarLeft = 15;
 static const CGSize kAvatarSize = {32,32};
-static const CGFloat kAvatarTop = 18;
+static const CGFloat kAvatarTop = 15;
 static const CGFloat kNameLabelLeft = 10;
 static const CGFloat kLocationLabelRight = -12;
 static const CGFloat kLocationLabelTop = 15;
@@ -61,7 +61,8 @@ static const CGFloat kImageScale = 0.85;
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
     if (self.superview != newSuperview && newSuperview) {
-        self.bounds = newSuperview.bounds;
+        self.frame = newSuperview.bounds;
+        self.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -91,12 +92,12 @@ static const CGFloat kImageScale = 0.85;
     [self.commentBlankView addSubview:self.promptView];
     [self.commentBlankView addSubview:self.commentLabel];
     
-    self.separatorLineView.backgroundColor = [UIColor colorWithHex:kLineViewColor];
-    self.nameLabel.textColor = [UIColor colorWithHex:kNameColor];
+    self.separatorLineView.backgroundColor = [UIColor ic_colorWithHex:kLineViewColor alpha:0.2];
+    self.nameLabel.textColor = [UIColor ic_colorWithHex:kNameColor];
     self.nameLabel.font = [UIFont systemFontOfSize:kTextFontSize];
-    self.locationLabel.textColor = [UIColor colorWithHex:kTextColor];
+    self.locationLabel.textColor = [UIColor ic_colorWithHex:kTextColor];
     self.locationLabel.font = [UIFont systemFontOfSize:kTextFontSize];
-    self.commentLabel.textColor = [UIColor colorWithHex:kTextColor];
+    self.commentLabel.textColor = [UIColor ic_colorWithHex:kTextColor];
     self.commentLabel.font = [UIFont systemFontOfSize:kTextFontSize];
     self.headBlankView.backgroundColor = [UIColor whiteColor];
     self.locationBlankView.backgroundColor = [UIColor whiteColor];
@@ -145,13 +146,20 @@ static const CGFloat kImageScale = 0.85;
     [self.promptView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(kPromptViewSpace);
         make.right.mas_equalTo(-kPromptViewSpace);
-        make.height.mas_equalTo(18);
+//        make.height.mas_equalTo(18);
     }];
     [self.commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.mas_equalTo(kPromptViewSpace);
+        make.top.mas_equalTo(self.promptView.mas_bottom).offset(kPromptViewSpace);
+        make.left.mas_equalTo(kPromptViewSpace*2);
         make.right.mas_equalTo(-kPromptViewSpace);
         make.bottom.mas_equalTo(0).priorityHigh();
     }];
+    
+    
+    
+    [self.locationLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self.commentLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self.promptLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     
 }
 
@@ -161,7 +169,11 @@ static const CGFloat kImageScale = 0.85;
     
         self.promptLabel = [UILabel new];
         self.promptLabel.textColor = [UIColor whiteColor];
-        self.promptLabel.font = [UIFont systemFontOfSize:10];
+        self.promptLabel.font = [UIFont systemFontOfSize:11];
+        self.promptLabel.backgroundColor = [UIColor ic_colorWithHex:0x7ED321];
+        self.promptLabel.textAlignment = NSTextAlignmentCenter;
+        self.promptLabel.layer.cornerRadius = 9;
+        self.promptLabel.layer.masksToBounds = YES;
         
         UIImageView *leftImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"左边"]];
         UIImageView *rightImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"右边"]];
@@ -175,12 +187,16 @@ static const CGFloat kImageScale = 0.85;
         }];
         [self.promptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(leftImageView.mas_right).offset(5);
+            make.top.mas_equalTo(0);
             make.centerX.mas_equalTo(0);
             make.centerY.mas_equalTo(0);
+            make.height.mas_equalTo(18);
+            make.width.mas_equalTo(75);
         }];
         [rightImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(0);
             make.left.mas_equalTo(self.promptLabel.mas_right).offset(5);
+            make.centerY.mas_equalTo(0);
         }];
         
         
@@ -195,6 +211,8 @@ static const CGFloat kImageScale = 0.85;
     self.nameLabel.text = @"weixiny1991";
     self.sceneImageView.image = [UIImage imageNamed:@"pic"];
     self.locationLabel.text = @"内蒙古自治区  巴丹吉林沙漠";
+    self.promptLabel.text = @"推荐理由";
+    self.commentLabel.text = @"这里的风景真的很不错";
 }
 
 

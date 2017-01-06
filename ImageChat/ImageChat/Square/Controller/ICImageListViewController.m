@@ -10,6 +10,7 @@
 #import "ICImageListViewController.h"
 #import "ICImageCardTableViewCell.h"
 #import "UIColor+ICHex.h"
+#import "ICImageInfoViewController.h"
 
 static NSString *cellIdentify = @"imageCardCell";
 static NSString *kTitle = @"热门";
@@ -54,7 +55,7 @@ static const CGFloat kInnerSpace = 3;
         _tableView.dataSource = self;
         [_tableView registerClass:[ICImageCardTableViewCell class] forCellReuseIdentifier:cellIdentify];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.backgroundColor = [UIColor colorWithHex:kBackgroundColor];
+        _tableView.backgroundColor = [UIColor ic_colorWithHex:kBackgroundColor];
         _tableView.contentInset = UIEdgeInsetsMake(0, 0, kTableViewBottom, 0);
     }
     return _tableView;
@@ -106,7 +107,9 @@ static const CGFloat kInnerSpace = 3;
 #pragma mark - TableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    ICImageInfoViewController *controller = [ICImageInfoViewController new];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

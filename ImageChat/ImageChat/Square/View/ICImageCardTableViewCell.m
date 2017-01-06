@@ -81,7 +81,7 @@ static const CGFloat kLabelInerSpace = 10;
     [self.blankView addSubview:self.dateLable];
     [self.blankView addSubview:self.subtitleLabel];
     
-    self.backgroundColor = [UIColor colorWithHex:kBackgroundColor];
+    self.backgroundColor = [UIColor ic_colorWithHex:kBackgroundColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.groupView.layer.cornerRadius = 5;
@@ -98,9 +98,9 @@ static const CGFloat kLabelInerSpace = 10;
     
     self.titleLable.textColor = [UIColor whiteColor];
     self.titleLable.font = [UIFont systemFontOfSize:kTitleFontSize];
-    self.dateLable.textColor = [UIColor colorWithHex:kDateFontColor];
+    self.dateLable.textColor = [UIColor ic_colorWithHex:kDateFontColor];
     self.dateLable.font = [UIFont systemFontOfSize:kDateFontSize];
-    self.subtitleLabel.textColor = [UIColor colorWithHex:kSubtitleColor];
+    self.subtitleLabel.textColor = [UIColor ic_colorWithHex:kSubtitleColor];
     self.subtitleLabel.font = [UIFont systemFontOfSize:kSubtitleFontSize];
 }
 

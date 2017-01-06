@@ -44,7 +44,7 @@
 
 - (void)customizeNavigationBar {
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithHex:NAVIGATIONBAR_COLOR]];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor ic_colorWithHex:NAVIGATIONBAR_COLOR]];
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
                                       forBarPosition:UIBarPositionAny
@@ -58,9 +58,9 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     DDLogDebug(@"Did finish launching");
     
-    #ifndef __OPTIMIZE__
-        [[RRFPSBar sharedInstance] setHidden:NO];
-    #endif
+//    #ifndef __OPTIMIZE__
+//        [[RRFPSBar sharedInstance] setHidden:NO];
+//    #endif
 }
 
 

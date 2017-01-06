@@ -10,5 +10,7 @@
 
 @interface UIColor (ICHex)
 
-+ (UIColor *)colorWithHex:(NSUInteger)hex;
++ (UIColor *)ic_colorWithHex:(NSUInteger)hex;
++ (UIColor *)ic_colorWithHex:(NSUInteger)hex
+                       alpha:(CGFloat)alpha;
 @end
