@@ -20,6 +20,10 @@ static const CGFloat kSpace = 15;
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, copy) NSArray *buttons;
 
+@property (nonatomic, strong) UIImageView *lineImageView;
+
+
+
 @end
 
 @implementation ICImageInfoToolbarView
@@ -35,29 +39,63 @@ static const CGFloat kSpace = 15;
 }
 
 - (void)configurateSubviews {
-    self.collectButton = [[ICImageInfoMenuButton alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"collection"]];
-    self.downloadButton = [[ICImageInfoMenuButton alloc] initWithTitle:@"下载" image:[UIImage imageNamed:@"download"]];
-    self.deleteButton = [[ICImageInfoMenuButton alloc] initWithTitle:@"删除" image:[UIImage imageNamed:@"delete"]];
+    self.collectButton = [ICImageInfoMenuButton initWithTitle:@"收藏" image:[UIImage imageNamed:@"collection"]];
+    self.downloadButton = [ICImageInfoMenuButton initWithTitle:@"下载" image:[UIImage imageNamed:@"download"]];
+    self.deleteButton = [ICImageInfoMenuButton initWithTitle:@"删除" image:[UIImage imageNamed:@"delete"]];
     self.shareButton = [UIButton new];
     [self.shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
-    
     self.buttons = @[self.collectButton, self.downloadButton, self.deleteButton, self.shareButton];
+    self.lineImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg2"]];
+    [self addSubview:self.lineImageView];
+    
+    [self.collectButton addTarget:self action:@selector(collect:) forControlEvents:UIControlEventTouchUpInside];
+    [self.downloadButton addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
+    [self.deleteButton addTarget:self action:@selector(delete:) forControlEvents:UIControlEventTouchUpInside];
+    [self.shareButton addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)makeConstraint {
     CGFloat distributeSpace;
     CGFloat contentWidth;
-    
     for (UIButton *button in self.buttons) {
         [self addSubview:button];
         contentWidth += button.ic_intrinsicWidth;
     }
-    distributeSpace = (SCREEN_WIDTH - kSpace*2 - contentWidth)/3;
+    distributeSpace = (contentWidth - kSpace*2)/3;
     [self.buttons mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:distributeSpace leadSpacing:kSpace tailSpacing:kSpace];
     [self.buttons mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
     }];
+    [self.lineImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(1);
+    }];
 }
+
+#pragma mark - Button Action
+
+- (void)collect:(UIButton *)button {
+    if (self.delegate) {
+        [self.delegate ICImageInfoToolbarView:self didTouched:ImageInfoToolbarActionTypeCollect];
+    }
+}
+- (void)download:(UIButton *)button {
+    if (self.delegate) {
+       [self.delegate ICImageInfoToolbarView:self didTouched:ImageInfoToolbarActionTypeDownload];
+    }
+}
+- (void)delete:(UIButton *)button {
+    if (self.delegate) {
+        [self.delegate ICImageInfoToolbarView:self didTouched:ImageInfoToolbarActionTypeDelete];
+    }
+}
+- (void)share:(UIButton *)button {
+    if (self.delegate) {
+        [self.delegate ICImageInfoToolbarView:self didTouched:ImageInfoToolbarActionTypeShare];
+    }
+}
+
+
 
 
 

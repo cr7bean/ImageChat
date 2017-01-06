@@ -13,7 +13,7 @@
 
 static NSString *kTitle = @"详情";
 
-@interface ICImageInfoViewController ()
+@interface ICImageInfoViewController ()<ICImageInfoToolbarViewDelegate>
 
 @property (nonatomic, strong)  ICImageInfoMainView *mainView;
 @property (nonatomic, strong) ICImageInfoToolbarView *toolbarView;
@@ -43,6 +43,7 @@ static NSString *kTitle = @"详情";
 - (void)configurateSubviews {
     self.mainView = [ICImageInfoMainView new];
     self.toolbarView = [ICImageInfoToolbarView new];
+    self.toolbarView.delegate = self;
     [self.view addSubview:self.mainView];
     [self.view addSubview:self.toolbarView];
     
@@ -52,6 +53,43 @@ static NSString *kTitle = @"详情";
     }];
 }
 
+#pragma mark - ICImageInfoToolbarViewDelegate
+
+- (void)ICImageInfoToolbarView:(ICImageInfoToolbarView *)toolbarView didTouched:(ImageInfoToolbarActionType)actionType {
+    switch (actionType) {
+        case ImageInfoToolbarActionTypeCollect: {
+            [self collect];
+            break;
+        }
+        case ImageInfoToolbarActionTypeDownload: {
+            [self download];
+            break;
+        }
+        case ImageInfoToolbarActionTypeDelete: {
+            [self delete];
+            break;
+        }
+        case ImageInfoToolbarActionTypeShare: {
+            [self share];
+            break;
+        }
+    }
+}
+
+# pragma mark Toolbar Action
+
+- (void)collect {
+    
+}
+- (void)download {
+    
+}
+- (void)delete {
+    
+}
+- (void)share {
+    
+}
 
 
 @end

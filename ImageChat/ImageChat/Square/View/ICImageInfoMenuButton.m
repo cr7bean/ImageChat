@@ -12,7 +12,8 @@
 static const NSUInteger kTitleFontSize = 13;
 static const CGSize kImageSize = {16,16};
 static const NSUInteger kTitleColor = 0x999999;
-static const CGFloat kInnerSpace = 10;
+static const NSUInteger kTitleColorHighlighted = 0x87541E;
+static const CGFloat kInnerSpace = 5;
 
 @implementation ICImageInfoMenuButton
 
@@ -23,14 +24,21 @@ static const CGFloat kInnerSpace = 10;
     if (self) {
         [self setTitle:title forState:UIControlStateNormal];
         [self setImage:image forState:UIControlStateNormal];
-        self.imageView.size = kImageSize;
         self.titleLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
-        self.titleLabel.textColor = [UIColor ic_colorWithHex:kTitleColor];
+        [self setTitleColor:[UIColor ic_colorWithHex:kTitleColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor ic_colorWithHex:kTitleColorHighlighted] forState:UIControlStateHighlighted];
     }
     return self;
 }
 
++ (instancetype)initWithTitle:(NSString *)title
+                        image:(UIImage *)image {
+    return [[self alloc] initWithTitle:title image:image];
+}
+
 - (void)layoutSubviews {
+    [super layoutSubviews];
+    self.imageView.size = kImageSize;
     self.imageEdgeInsets = UIEdgeInsetsMake(0, -kInnerSpace, 0, kInnerSpace);
     self.contentEdgeInsets = UIEdgeInsetsMake(0, kInnerSpace, 0, 0);
 }

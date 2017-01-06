@@ -10,7 +10,7 @@
 
 @interface ICImageInfoMenuButton : UIButton
 
-- (instancetype)initWithTitle:(NSString *)title
++ (instancetype)initWithTitle:(NSString *)title
                         image:(UIImage *)image;
 
 
