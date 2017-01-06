@@ -49,10 +49,10 @@
     return self.size.width;
 }
 
-- (CGFloat)intrinsicHeight {
+- (CGFloat)ic_intrinsicHeight {
     return self.intrinsicContentSize.height;
 }
-- (CGFloat)intrinsicWidth {
+- (CGFloat)ic_intrinsicWidth {
     return self.intrinsicContentSize.width;
 }
 

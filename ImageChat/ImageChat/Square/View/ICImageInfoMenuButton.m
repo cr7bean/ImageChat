@@ -10,9 +10,9 @@
 #import "UIColor+ICHex.h"
 
 static const NSUInteger kTitleFontSize = 13;
-static const CGSize kImageSize = {18,18};
+static const CGSize kImageSize = {16,16};
 static const NSUInteger kTitleColor = 0x999999;
-static const CGFloat kInnerSpace = 5;
+static const CGFloat kInnerSpace = 10;
 
 @implementation ICImageInfoMenuButton
 
@@ -24,8 +24,8 @@ static const CGFloat kInnerSpace = 5;
         [self setTitle:title forState:UIControlStateNormal];
         [self setImage:image forState:UIControlStateNormal];
         self.imageView.size = kImageSize;
-        self.titleLabel.textColor = [UIColor ic_colorWithHex:kTitleColor];
         self.titleLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
+        self.titleLabel.textColor = [UIColor ic_colorWithHex:kTitleColor];
     }
     return self;
 }

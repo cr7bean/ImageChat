@@ -77,7 +77,6 @@ static const CGFloat kImageScale = 0.85;
     self.locationLabel = [UILabel new];
     self.separatorLineView = [UIView new];
     self.commentBlankView = [UIView new];
-//    self.promptView = [UIView new];
     self.commentLabel = [UILabel new];
     
     [self addSubview:self.headBlankView];
@@ -146,7 +145,6 @@ static const CGFloat kImageScale = 0.85;
     [self.promptView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(kPromptViewSpace);
         make.right.mas_equalTo(-kPromptViewSpace);
-//        make.height.mas_equalTo(18);
     }];
     [self.commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.promptView.mas_bottom).offset(kPromptViewSpace);
@@ -160,7 +158,6 @@ static const CGFloat kImageScale = 0.85;
     [self.locationLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     [self.commentLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     [self.promptLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-    
 }
 
 - (UIView *)promptView {

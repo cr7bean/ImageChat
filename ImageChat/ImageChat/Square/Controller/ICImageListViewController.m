@@ -73,7 +73,7 @@ static const CGFloat kInnerSpace = 3;
         [_headView addSubview:textLabel];
 
         imageView.size = kImageSize;
-        textLabel.size = CGSizeMake(textLabel.intrinsicWidth, textLabel.intrinsicHeight);
+        textLabel.size = CGSizeMake(textLabel.ic_intrinsicWidth, textLabel.ic_intrinsicHeight);
         
         CGFloat width = imageView.width + textLabel.width;
         CGFloat height = MAX(imageView.height, textLabel.height);

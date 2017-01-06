@@ -21,8 +21,8 @@
 - (CGFloat)x;
 - (CGFloat)y;
 
-- (CGFloat)intrinsicHeight;
-- (CGFloat)intrinsicWidth;
+- (CGFloat)ic_intrinsicHeight;
+- (CGFloat)ic_intrinsicWidth;
 
 - (void)setSize:(CGSize)size;
 
