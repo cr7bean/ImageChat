@@ -20,6 +20,7 @@
 		FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E4B1E1E249A00E27045 /* ICImageInfoMainView.m */; };
 		FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */; };
 		FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */; };
+		FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
 		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
 		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
@@ -81,6 +82,8 @@
 		FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoToolbarView.m; sourceTree = "<group>"; };
 		FD579E501E1E259200E27045 /* ICImageInfoMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageInfoMenuButton.h; sourceTree = "<group>"; };
 		FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoMenuButton.m; sourceTree = "<group>"; };
+		FD57D2881E27564E009F0E96 /* UIButton+ICHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ICHelper.h"; sourceTree = "<group>"; };
+		FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ICHelper.m"; sourceTree = "<group>"; };
 		FD5C50161E1A82F600AC2CB9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		FD5C50191E1A850B00AC2CB9 /* UIColor+ICHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ICHex.h"; sourceTree = "<group>"; };
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				FD6608871E1D008D0035D03E /* UIView+ICDebug.m */,
 				FD2F16731E1FEC7500C13EDF /* UIViewController+ICTitleView.h */,
 				FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */,
+				FD57D2881E27564E009F0E96 /* UIButton+ICHelper.h */,
+				FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 				FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */,
 				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
 				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
+				FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */,
 				FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */,
 				FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */,
 			);

@@ -58,14 +58,6 @@ static const CGFloat kImageScale = 0.85;
     return self;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    [super willMoveToSuperview:newSuperview];
-    if (self.superview != newSuperview && newSuperview) {
-        self.frame = newSuperview.bounds;
-        self.backgroundColor = [UIColor whiteColor];
-    }
-}
-
 #pragma mark - Configurate Subiews
 
 - (void)configurateSubviews {

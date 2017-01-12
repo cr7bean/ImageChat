@@ -8,12 +8,11 @@
 
 #import "ICImageInfoMenuButton.h"
 #import "UIColor+ICHex.h"
+#import "UIButton+ICHelper.h"
 
 static const NSUInteger kTitleFontSize = 13;
-static const CGSize kImageSize = {16,16};
 static const NSUInteger kTitleColor = 0x999999;
 static const NSUInteger kTitleColorHighlighted = 0x87541E;
-static const CGFloat kInnerSpace = 5;
 
 @implementation ICImageInfoMenuButton
 
@@ -27,6 +26,9 @@ static const CGFloat kInnerSpace = 5;
         self.titleLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
         [self setTitleColor:[UIColor ic_colorWithHex:kTitleColor] forState:UIControlStateNormal];
         [self setTitleColor:[UIColor ic_colorWithHex:kTitleColorHighlighted] forState:UIControlStateHighlighted];
+        [self ic_imagePosition:ImagePositionLeft];
+//        [self.titleLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
+        
     }
     return self;
 }
@@ -34,13 +36,6 @@ static const CGFloat kInnerSpace = 5;
 + (instancetype)initWithTitle:(NSString *)title
                         image:(UIImage *)image {
     return [[self alloc] initWithTitle:title image:image];
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.imageView.ic_size = kImageSize;
-    self.imageEdgeInsets = UIEdgeInsetsMake(0, -kInnerSpace, 0, kInnerSpace);
-    self.contentEdgeInsets = UIEdgeInsetsMake(0, kInnerSpace, 0, 0);
 }
 
 @end

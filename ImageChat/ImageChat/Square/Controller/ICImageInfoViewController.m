@@ -53,6 +53,9 @@ static const CGFloat kToolbarHeight = 49;
         make.left.right.bottom.mas_equalTo(0);
         make.height.mas_equalTo(kToolbarHeight);
     }];
+    [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
 
 

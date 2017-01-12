@@ -11,6 +11,7 @@
 #import "ICImageInfoMenuButton.h"
 
 static const CGFloat kSpace = 15;
+static const CGFloat kButtonsLength = 200;
 
 @interface ICImageInfoToolbarView ()
 
@@ -39,7 +40,7 @@ static const CGFloat kSpace = 15;
 }
 
 - (void)configurateSubviews {
-    self.collectButton = [ICImageInfoMenuButton initWithTitle:@"收藏" image:[UIImage imageNamed:@"collection"]];
+    self.collectButton = [ICImageInfoMenuButton initWithTitle:@"收藏" image:[UIImage imageNamed:@"collect"]];
     self.downloadButton = [ICImageInfoMenuButton initWithTitle:@"下载" image:[UIImage imageNamed:@"download"]];
     self.deleteButton = [ICImageInfoMenuButton initWithTitle:@"删除" image:[UIImage imageNamed:@"delete"]];
     self.shareButton = [UIButton new];
@@ -56,12 +57,10 @@ static const CGFloat kSpace = 15;
 
 - (void)makeConstraint {
     CGFloat distributeSpace;
-    CGFloat contentWidth;
     for (UIButton *button in self.buttons) {
         [self addSubview:button];
-        contentWidth += button.ic_intrinsicWidth;
     }
-    distributeSpace = (contentWidth - kSpace*2)/3;
+    distributeSpace = (SCREEN_WIDTH - kButtonsLength - kSpace*2)/3;
     [self.buttons mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:distributeSpace leadSpacing:kSpace tailSpacing:kSpace];
     [self.buttons mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
