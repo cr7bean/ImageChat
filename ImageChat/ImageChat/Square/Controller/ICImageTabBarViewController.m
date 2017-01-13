@@ -8,8 +8,11 @@
 
 #import "ICImageTabBarViewController.h"
 #import "ICImageListViewController.h"
+#import "ICSearchImageViewController.h"
+#import "ICSendImageViewController.h"
+#import "ICMeViewController.h"
 
-@interface ICImageTabBarViewController ()
+@interface ICImageTabBarViewController ()<UITabBarDelegate, UITabBarControllerDelegate>
 
 @end
 
@@ -33,13 +36,30 @@
 
 - (void)encapsulateTabBarControllers {
     ICImageListViewController *imageListController = [ICImageListViewController new];
-    imageListController.tabBarItem = [[UITabBarItem alloc] initWithTitle: nil
-                                                                   image: [UIImage imageNamed:@"tab-icon1"]tag:0];
-    
-    UINavigationController *squareNavigationController = [[UINavigationController alloc] initWithRootViewController:imageListController];
+    ICSearchImageViewController *searchImageController = [ICSearchImageViewController new];
+    ICSendImageViewController *sendImageController = [ICSendImageViewController new];
+    ICMeViewController *meViewController = [ICMeViewController new];
+    NSArray *controllers = @[imageListController, searchImageController, sendImageController, meViewController];
+    NSArray *imageNames = @[@"tab-icon1", @"tab-icon2", @"tab-icon3", @"tab-icon4"];
+    NSMutableArray *navigationControllers = [NSMutableArray array];
+    for (int i=0; i<controllers.count; i++) {
+        [controllers[i] setTabBarItem:[[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:imageNames[i]] tag:i]];
+        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:controllers[i]];
+        [navigationControllers addObject:controller];
+    }
+
+    searchImageController.hidesBottomBarWhenPushed = YES;
     self.tabBar.itemPositioning = UITabBarItemPositioningFill;
-    self.viewControllers = @[squareNavigationController];
+    self.viewControllers = [navigationControllers copy];
     
 }
+
+
+
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSUInteger selectedIndex = [tabBar.items indexOfObject:item];
+}
+
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8AA620EF7824BE93B1F87739 /* Pods_ImageChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4715723E8AED61F6803E82A /* Pods_ImageChat.framework */; };
+		FD06D42D1E2877F80087CA65 /* ICSearchImageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD06D42C1E2877F80087CA65 /* ICSearchImageHeadView.m */; };
+		FD06D4301E287F300087CA65 /* ICSearchImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD06D42F1E287F300087CA65 /* ICSearchImageTableViewCell.m */; };
 		FD2F16751E1FEC7500C13EDF /* UIViewController+ICTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */; };
 		FD55E4511E1A497A00C9F489 /* ImageChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E4501E1A497A00C9F489 /* ImageChatTests.m */; };
 		FD55E45C1E1A497A00C9F489 /* ImageChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55E45B1E1A497A00C9F489 /* ImageChatUITests.m */; };
@@ -21,6 +23,9 @@
 		FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E4E1E1E24F300E27045 /* ICImageInfoToolbarView.m */; };
 		FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */; };
 		FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */; };
+		FD57D2D41E27BF9E009F0E96 /* ICSearchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2D31E27BF9E009F0E96 /* ICSearchImageViewController.m */; };
+		FD57D2D91E27D292009F0E96 /* ICSendImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */; };
+		FD57D2DC1E27D2A1009F0E96 /* ICMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
 		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
 		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
@@ -56,6 +61,10 @@
 		752627F643F2507066D38DB5 /* Pods-ImageChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageChat/Pods-ImageChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D4715723E8AED61F6803E82A /* Pods_ImageChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38C34F20693C5F33FDD497 /* Pods_ImageChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD06D42B1E2877F80087CA65 /* ICSearchImageHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSearchImageHeadView.h; sourceTree = "<group>"; };
+		FD06D42C1E2877F80087CA65 /* ICSearchImageHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSearchImageHeadView.m; sourceTree = "<group>"; };
+		FD06D42E1E287F300087CA65 /* ICSearchImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSearchImageTableViewCell.h; sourceTree = "<group>"; };
+		FD06D42F1E287F300087CA65 /* ICSearchImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSearchImageTableViewCell.m; sourceTree = "<group>"; };
 		FD2F16731E1FEC7500C13EDF /* UIViewController+ICTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ICTitleView.h"; sourceTree = "<group>"; };
 		FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ICTitleView.m"; sourceTree = "<group>"; };
 		FD55E4331E1A497900C9F489 /* ImageChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +93,12 @@
 		FD579E511E1E259200E27045 /* ICImageInfoMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageInfoMenuButton.m; sourceTree = "<group>"; };
 		FD57D2881E27564E009F0E96 /* UIButton+ICHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ICHelper.h"; sourceTree = "<group>"; };
 		FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ICHelper.m"; sourceTree = "<group>"; };
+		FD57D2D21E27BF9E009F0E96 /* ICSearchImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSearchImageViewController.h; sourceTree = "<group>"; };
+		FD57D2D31E27BF9E009F0E96 /* ICSearchImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSearchImageViewController.m; sourceTree = "<group>"; };
+		FD57D2D71E27D292009F0E96 /* ICSendImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageViewController.h; sourceTree = "<group>"; };
+		FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageViewController.m; sourceTree = "<group>"; };
+		FD57D2DA1E27D2A1009F0E96 /* ICMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeViewController.h; sourceTree = "<group>"; };
+		FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeViewController.m; sourceTree = "<group>"; };
 		FD5C50161E1A82F600AC2CB9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		FD5C50191E1A850B00AC2CB9 /* UIColor+ICHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ICHex.h"; sourceTree = "<group>"; };
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
@@ -241,6 +256,8 @@
 		FD55E4851E1A5F0300C9F489 /* SearchImage */ = {
 			isa = PBXGroup;
 			children = (
+				FD57D2CE1E27BB89009F0E96 /* View */,
+				FD57D2CD1E27BB7A009F0E96 /* Controller */,
 			);
 			path = SearchImage;
 			sourceTree = "<group>";
@@ -248,6 +265,7 @@
 		FD55E4871E1A5FA400C9F489 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				FD57D2D61E27D280009F0E96 /* Controller */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -313,6 +331,44 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FD57D2CD1E27BB7A009F0E96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD57D2D21E27BF9E009F0E96 /* ICSearchImageViewController.h */,
+				FD57D2D31E27BF9E009F0E96 /* ICSearchImageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD57D2CE1E27BB89009F0E96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD06D42B1E2877F80087CA65 /* ICSearchImageHeadView.h */,
+				FD06D42C1E2877F80087CA65 /* ICSearchImageHeadView.m */,
+				FD06D42E1E287F300087CA65 /* ICSearchImageTableViewCell.h */,
+				FD06D42F1E287F300087CA65 /* ICSearchImageTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD57D2D51E27D273009F0E96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD57D2D71E27D292009F0E96 /* ICSendImageViewController.h */,
+				FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD57D2D61E27D280009F0E96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD57D2DA1E27D2A1009F0E96 /* ICMeViewController.h */,
+				FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FD5C50171E1A845E00AC2CB9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +387,7 @@
 		FD5C50181E1A847400AC2CB9 /* SendImage */ = {
 			isa = PBXGroup;
 			children = (
+				FD57D2D51E27D273009F0E96 /* Controller */,
 			);
 			path = SendImage;
 			sourceTree = "<group>";
@@ -552,13 +609,18 @@
 				FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */,
 				FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */,
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,
+				FD06D42D1E2877F80087CA65 /* ICSearchImageHeadView.m in Sources */,
 				FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */,
+				FD57D2DC1E27D2A1009F0E96 /* ICMeViewController.m in Sources */,
 				FD2F16751E1FEC7500C13EDF /* UIViewController+ICTitleView.m in Sources */,
+				FD06D4301E287F300087CA65 /* ICSearchImageTableViewCell.m in Sources */,
 				FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */,
+				FD57D2D91E27D292009F0E96 /* ICSendImageViewController.m in Sources */,
 				FD55E4AC1E1A672200C9F489 /* ICImageInfoViewController.m in Sources */,
 				FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */,
 				FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */,
 				FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */,
+				FD57D2D41E27BF9E009F0E96 /* ICSearchImageViewController.m in Sources */,
 				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
 				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
 				FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */,
