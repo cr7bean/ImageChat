@@ -49,16 +49,16 @@
     }
 
     searchImageController.hidesBottomBarWhenPushed = YES;
+    sendImageController.hidesBottomBarWhenPushed = YES;
     self.tabBar.itemPositioning = UITabBarItemPositioningFill;
     self.viewControllers = [navigationControllers copy];
+    
     
 }
 
 
-
-
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-    NSUInteger selectedIndex = [tabBar.items indexOfObject:item];
+    
 }
 
 

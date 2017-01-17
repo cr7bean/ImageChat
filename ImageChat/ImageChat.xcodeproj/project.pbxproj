@@ -36,6 +36,8 @@
 		FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6608871E1D008D0035D03E /* UIView+ICDebug.m */; };
 		FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66088A1E1D09130035D03E /* ICImageCardModel.m */; };
 		FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66088F1E1D0E810035D03E /* RRFPSBar.m */; };
+		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
+		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,10 @@
 		FD66088A1E1D09130035D03E /* ICImageCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCardModel.m; sourceTree = "<group>"; };
 		FD66088E1E1D0E810035D03E /* RRFPSBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFPSBar.h; sourceTree = "<group>"; };
 		FD66088F1E1D0E810035D03E /* RRFPSBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFPSBar.m; sourceTree = "<group>"; };
+		FD7226E61E2DE61700AF842F /* ICSendImageMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageMainView.h; sourceTree = "<group>"; };
+		FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageMainView.m; sourceTree = "<group>"; };
+		FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImagePreviewView.h; sourceTree = "<group>"; };
+		FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImagePreviewView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +393,7 @@
 		FD5C50181E1A847400AC2CB9 /* SendImage */ = {
 			isa = PBXGroup;
 			children = (
+				FD7226E21E2DD98100AF842F /* View */,
 				FD57D2D51E27D273009F0E96 /* Controller */,
 			);
 			path = SendImage;
@@ -421,6 +428,17 @@
 				FD66088F1E1D0E810035D03E /* RRFPSBar.m */,
 			);
 			path = RRFPSBar;
+			sourceTree = "<group>";
+		};
+		FD7226E21E2DD98100AF842F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD7226E61E2DE61700AF842F /* ICSendImageMainView.h */,
+				FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */,
+				FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */,
+				FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,9 +641,11 @@
 				FD57D2D41E27BF9E009F0E96 /* ICSearchImageViewController.m in Sources */,
 				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
 				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
+				FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */,
 				FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */,
 				FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */,
 				FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */,
+				FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

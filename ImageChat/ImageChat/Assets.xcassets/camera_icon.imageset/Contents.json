@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "照相窗口.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "btn22@2x.png",
+      "filename" : "照相窗口@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "btn23@3x.png",
+      "filename" : "照相窗口@3x.png",
       "scale" : "3x"
     }
   ],
