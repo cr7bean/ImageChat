@@ -10,7 +10,6 @@
 #import "ICSendImageMainView.h"
 #import "UIButton+ICHelper.h"
 #import "UIColor+ICHex.h"
-#import "ICSendImagePreviewView.h"
 #import "UIView+ICDebug.h"
 
 static const CGFloat KButtonFontSize = 18;
@@ -21,7 +20,6 @@ static const CGFloat kButtonInner = 25;
 @interface ICSendImageMainView ()
 
 @property (nonatomic, strong) UIImageView *cameraIconImageView;
-@property (nonatomic, strong) ICSendImagePreviewView *camPreviewView;
 @property (nonatomic, strong) UIView *buttonGroupView;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *photographButton;
@@ -57,6 +55,8 @@ static const CGFloat kButtonInner = 25;
     
     self.cameraIconImageView.image = [UIImage imageNamed:@"camera_icon"];
     [self.photographButton setImage:[UIImage imageNamed:@"photography_button"] forState:UIControlStateNormal];
+    self.camPreviewView.backgroundColor = [UIColor whiteColor];
+    [self hidePreviewView];
     
     [self.closeButton setTitleColor:[UIColor ic_colorWithHex:kButtonFontColor] forState:UIControlStateNormal];
     self.closeButton.titleLabel.font = [UIFont systemFontOfSize:KButtonFontSize];
@@ -101,6 +101,14 @@ static const CGFloat kButtonInner = 25;
     [buttons mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
     }];
+}
+
+- (void)hidePreviewView {
+    self.camPreviewView.hidden = YES;
+}
+
+- (void)showPreviewView {
+    self.camPreviewView.hidden = NO;
 }
 
 #pragma mark - Button Action

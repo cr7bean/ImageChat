@@ -15,4 +15,21 @@
     return [AVCaptureVideoPreviewLayer class];
 }
 
+- (AVCaptureVideoPreviewLayer *)videoPreviewLayer
+{
+    AVCaptureVideoPreviewLayer *captureLayer = (AVCaptureVideoPreviewLayer *)self.layer;
+    captureLayer.videoGravity = AVLayerVideoGravityResize;
+    return captureLayer;
+}
+
+- (AVCaptureSession *)session
+{
+    return self.videoPreviewLayer.session;
+}
+
+- (void)setSession:(AVCaptureSession *)session
+{
+    self.videoPreviewLayer.session = session;
+}
+
 @end

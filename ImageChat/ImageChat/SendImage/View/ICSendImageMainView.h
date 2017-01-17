@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ICSendImagePreviewView.h"
 
 typedef NS_ENUM(NSUInteger, SendImageButtonType) {
     SendImageButtonTypeClose = 0,
@@ -25,6 +26,9 @@ typedef NS_ENUM(NSUInteger, SendImageButtonType) {
 
 @interface ICSendImageMainView : UIView
 
+@property (nonatomic, strong) ICSendImagePreviewView *camPreviewView;
 @property (nonatomic, weak) id<ICSendImageMainViewDelegate> delegate;
+- (void)hidePreviewView;
+- (void)showPreviewView;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface UIImage (ICHelper)
 
++ (UIImage *)ic_imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
+
 @end

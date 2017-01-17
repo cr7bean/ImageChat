@@ -38,6 +38,7 @@
 		FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66088F1E1D0E810035D03E /* RRFPSBar.m */; };
 		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
 		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
+		FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageMainView.m; sourceTree = "<group>"; };
 		FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImagePreviewView.h; sourceTree = "<group>"; };
 		FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImagePreviewView.m; sourceTree = "<group>"; };
+		FD7226EC1E2E2F9300AF842F /* UIImage+ICHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ICHelper.h"; sourceTree = "<group>"; };
+		FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ICHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +389,8 @@
 				FD2F16741E1FEC7500C13EDF /* UIViewController+ICTitleView.m */,
 				FD57D2881E27564E009F0E96 /* UIButton+ICHelper.h */,
 				FD57D2891E27564E009F0E96 /* UIButton+ICHelper.m */,
+				FD7226EC1E2E2F9300AF842F /* UIImage+ICHelper.h */,
+				FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -631,6 +636,7 @@
 				FD6608881E1D008D0035D03E /* UIView+ICDebug.m in Sources */,
 				FD57D2DC1E27D2A1009F0E96 /* ICMeViewController.m in Sources */,
 				FD2F16751E1FEC7500C13EDF /* UIViewController+ICTitleView.m in Sources */,
+				FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */,
 				FD06D4301E287F300087CA65 /* ICSearchImageTableViewCell.m in Sources */,
 				FD579E4F1E1E24F300E27045 /* ICImageInfoToolbarView.m in Sources */,
 				FD57D2D91E27D292009F0E96 /* ICSendImageViewController.m in Sources */,
