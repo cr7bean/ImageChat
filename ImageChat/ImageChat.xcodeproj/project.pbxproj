@@ -26,6 +26,7 @@
 		FD57D2D41E27BF9E009F0E96 /* ICSearchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2D31E27BF9E009F0E96 /* ICSearchImageViewController.m */; };
 		FD57D2D91E27D292009F0E96 /* ICSendImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */; };
 		FD57D2DC1E27D2A1009F0E96 /* ICMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */; };
+		FD59BE421E2F46FB006CF6A9 /* ICMeTableHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD59BE411E2F46FB006CF6A9 /* ICMeTableHeadView.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
 		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
 		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
@@ -103,6 +104,8 @@
 		FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageViewController.m; sourceTree = "<group>"; };
 		FD57D2DA1E27D2A1009F0E96 /* ICMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeViewController.h; sourceTree = "<group>"; };
 		FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeViewController.m; sourceTree = "<group>"; };
+		FD59BE401E2F46FB006CF6A9 /* ICMeTableHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeTableHeadView.h; sourceTree = "<group>"; };
+		FD59BE411E2F46FB006CF6A9 /* ICMeTableHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeTableHeadView.m; sourceTree = "<group>"; };
 		FD5C50161E1A82F600AC2CB9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		FD5C50191E1A850B00AC2CB9 /* UIColor+ICHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ICHex.h"; sourceTree = "<group>"; };
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 		FD55E4871E1A5FA400C9F489 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				FD59BE3F1E2F46D7006CF6A9 /* View */,
 				FD57D2D61E27D280009F0E96 /* Controller */,
 			);
 			path = Me;
@@ -381,6 +385,15 @@
 				FD57D2DB1E27D2A1009F0E96 /* ICMeViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD59BE3F1E2F46D7006CF6A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD59BE401E2F46FB006CF6A9 /* ICMeTableHeadView.h */,
+				FD59BE411E2F46FB006CF6A9 /* ICMeTableHeadView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FD5C50171E1A845E00AC2CB9 /* Category */ = {
@@ -541,9 +554,6 @@
 			knownRegions = (
 				en,
 				Base,
-				de,
-				es,
-				ja,
 				"zh-Hans",
 			);
 			mainGroup = FD55E42A1E1A497900C9F489;
@@ -654,6 +664,7 @@
 				FD579E4C1E1E249A00E27045 /* ICImageInfoMainView.m in Sources */,
 				FD55E4A91E1A66FB00C9F489 /* ICImageListViewController.m in Sources */,
 				FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */,
+				FD59BE421E2F46FB006CF6A9 /* ICMeTableHeadView.m in Sources */,
 				FD57D2D41E27BF9E009F0E96 /* ICSearchImageViewController.m in Sources */,
 				FD5FA0371E1BF660005BC2DF /* ICImageCardTableViewCell.m in Sources */,
 				FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */,
