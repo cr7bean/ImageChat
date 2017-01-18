@@ -39,6 +39,7 @@
 		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
 		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
 		FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */; };
+		FD7226F11E2E3E6A00AF842F /* ICSendImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226F01E2E3E6A00AF842F /* ICSendImageEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImagePreviewView.m; sourceTree = "<group>"; };
 		FD7226EC1E2E2F9300AF842F /* UIImage+ICHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ICHelper.h"; sourceTree = "<group>"; };
 		FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ICHelper.m"; sourceTree = "<group>"; };
+		FD7226EF1E2E3E6A00AF842F /* ICSendImageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageEditViewController.h; sourceTree = "<group>"; };
+		FD7226F01E2E3E6A00AF842F /* ICSendImageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +368,8 @@
 			children = (
 				FD57D2D71E27D292009F0E96 /* ICSendImageViewController.h */,
 				FD57D2D81E27D292009F0E96 /* ICSendImageViewController.m */,
+				FD7226EF1E2E3E6A00AF842F /* ICSendImageEditViewController.h */,
+				FD7226F01E2E3E6A00AF842F /* ICSendImageEditViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +541,10 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				ja,
+				"zh-Hans",
 			);
 			mainGroup = FD55E42A1E1A497900C9F489;
 			productRefGroup = FD55E4341E1A497900C9F489 /* Products */;
@@ -629,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7226F11E2E3E6A00AF842F /* ICSendImageEditViewController.m in Sources */,
 				FD55E4B21E1A6C8E00C9F489 /* ICImageTabBarViewController.m in Sources */,
 				FD6608901E1D0E810035D03E /* RRFPSBar.m in Sources */,
 				FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */,

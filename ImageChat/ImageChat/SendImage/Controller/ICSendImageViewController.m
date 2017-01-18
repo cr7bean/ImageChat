@@ -12,8 +12,9 @@
 #import "UIViewController+ICTitleView.h"
 #import "ICSendImageMainView.h"
 #import "UIImage+ICHelper.h"
+#import "ICSendImageEditViewController.h"
 
-@interface ICSendImageViewController ()<ICSendImageMainViewDelegate>
+@interface ICSendImageViewController ()<ICSendImageMainViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong)  ICSendImageMainView *mainView;
 @property (nonatomic, strong) AVCaptureSession *session;
@@ -46,14 +47,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.session stopRunning];
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-//    AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer new];
-//    previewLayer.session = self.session;
-//    previewLayer.frame = CGRectMake(0, 0, 320, 50);
-//    [self.mainView.camPreviewView.layer addSublayer:previewLayer];
 }
 
 #pragma Configure Subviews
@@ -152,13 +145,39 @@
     AVCaptureConnection *imageConnection = [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
     [self.imageOutput captureStillImageAsynchronouslyFromConnection:imageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        UIImage *newImage = [UIImage ic_imageWithImage:[UIImage imageWithData:imageData] scaledToSize:SCREEN_SIZE];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            ICSendImageEditViewController *controller = [[ICSendImageEditViewController alloc] initWithImage:newImage];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+            [self presentViewController:navigationController animated:YES completion:nil];
+        });
         DDLogDebug(@"Capture image Success");
     }];
     
 }
 
 - (void)album {
-    
+    [self.session stopRunning];
+    UIImagePickerController *pickController = [UIImagePickerController new];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        pickController.navigationBar.tintColor = [UIColor whiteColor];
+        pickController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+        pickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        pickController.allowsEditing = NO;
+        pickController.delegate = self;
+        [self presentViewController:pickController animated:YES completion:nil];
+    }
 }
+
+
+#pragma mark - UIImagePickerController Delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *newImage = info[UIImagePickerControllerOriginalImage];
+    ICSendImageEditViewController *controller = [[ICSendImageEditViewController alloc] initWithImage:newImage];
+    [picker pushViewController:controller animated:YES];
+}
+
+
 
 @end
