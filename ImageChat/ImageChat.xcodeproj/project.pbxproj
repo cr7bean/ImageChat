@@ -48,6 +48,7 @@
 		FD6E813B1E309B4D00EAB25C /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81361E309B4D00EAB25C /* SVProgressHUD.framework */; };
 		FD6E813C1E309B4D00EAB25C /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81371E309B4D00EAB25C /* YYModel.framework */; };
 		FD6E813F1E30AC4900EAB25C /* ICMeLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */; };
+		FD6E81411E3102C300EAB25C /* SDVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81401E3102C300EAB25C /* SDVersion.framework */; };
 		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
 		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
 		FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */; };
@@ -152,6 +153,7 @@
 		FD6E81371E309B4D00EAB25C /* YYModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYModel.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ImageChat-hcfylhcpciugpjdphapugitkktml/Build/Products/Debug-iphonesimulator/YYModel/YYModel.framework"; sourceTree = "<group>"; };
 		FD6E813D1E30AC4900EAB25C /* ICMeLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeLoginTextField.h; sourceTree = "<group>"; };
 		FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeLoginTextField.m; sourceTree = "<group>"; };
+		FD6E81401E3102C300EAB25C /* SDVersion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDVersion.framework; path = "Pods/../build/Debug-iphoneos/SDVersion/SDVersion.framework"; sourceTree = "<group>"; };
 		FD7226E61E2DE61700AF842F /* ICSendImageMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageMainView.h; sourceTree = "<group>"; };
 		FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageMainView.m; sourceTree = "<group>"; };
 		FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImagePreviewView.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6E81411E3102C300EAB25C /* SDVersion.framework in Frameworks */,
 				FD6E81381E309B4D00EAB25C /* FMDB.framework in Frameworks */,
 				FD6E81391E309B4D00EAB25C /* GVUserDefaults.framework in Frameworks */,
 				FD6E813A1E309B4D00EAB25C /* MJRefresh.framework in Frameworks */,
@@ -199,6 +202,7 @@
 		5F8AE2AA65F2C90934596742 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD6E81401E3102C300EAB25C /* SDVersion.framework */,
 				FD6E81331E309B4D00EAB25C /* FMDB.framework */,
 				FD6E81341E309B4D00EAB25C /* GVUserDefaults.framework */,
 				FD6E81351E309B4D00EAB25C /* MJRefresh.framework */,
@@ -871,6 +875,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDVersion",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/LONG/Documents/APP/ImageChat/ImageChat/ImageChat/AppDelegate/ImageChat-Prefix.pch";
@@ -897,6 +902,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDVersion",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/LONG/Documents/APP/ImageChat/ImageChat/ImageChat/AppDelegate/ImageChat-Prefix.pch";

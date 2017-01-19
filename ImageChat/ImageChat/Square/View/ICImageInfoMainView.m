@@ -7,6 +7,7 @@
 //
 
 @import Masonry;
+@import SDVersion;
 #import "ICImageInfoMainView.h"
 #import "UIColor+ICHex.h"
 
@@ -17,7 +18,7 @@ static const NSUInteger kLineViewColor = 0x979797;
 
 static const CGFloat kAvatarLeft = 15;
 static const CGSize kAvatarSize = {32,32};
-static const CGFloat kAvatarTop = 15;
+static CGFloat kAvatarTop = 15;
 static const CGFloat kNameLabelLeft = 10;
 static const CGFloat kLocationLabelRight = -12;
 static const CGFloat kLocationLabelTop = 15;
@@ -25,7 +26,7 @@ static const CGFloat kLineViewHeight = 1;
 static const CGFloat kPromptViewSpace = 15;
 
 
-static const CGFloat kImageScale = 0.85;
+static CGFloat kImageScale = 0.85;
 
 @interface ICImageInfoMainView ()
 
@@ -99,6 +100,13 @@ static const CGFloat kImageScale = 0.85;
 #pragma mark - Constraints
 
 - (void)makeConstraint {
+    // 针对4s 单独设置
+    if ([SDVersion deviceSize] == Screen3Dot5inch) {
+        kImageScale = 0.55;
+        kAvatarTop = 7.5;
+    }
+    
+    
     [self.headBlankView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
     }];

@@ -7,6 +7,7 @@
 //
 
 @import Masonry;
+@import SDVersion;
 #import "ICSendImageEditViewController.h"
 #import "UIColor+ICHex.h"
 #import "UIButton+ICHelper.h"
@@ -16,16 +17,16 @@
 static const NSUInteger kTextColor = 0x999999;
 static const NSUInteger kLineViewColor = 0x979797;
 static const CGFloat kTextFontSize = 16;
-static const CGFloat kImageScale = 0.7;
+static CGFloat kImageScale = 0.7;
 static const CGFloat kLineViewTop = 10;
 static const CGFloat kTextFieldInner = 5;
 static const CGFloat kTextFiedlLeft = 15;
 static const CGFloat kTextFieldRight = -15;
-static const CGFloat kDescriptiveTextFieldHeight = 60;
+static CGFloat kDescriptiveTextFieldHeight = 60;
 
 static const CGFloat kButtonLeft = 30;
 static const CGFloat kButtonRight = -30;
-static const CGFloat kButtonBottom = -20;
+static CGFloat kButtonBottom = -20;
 
 
 @interface ICSendImageEditViewController ()<UITextFieldDelegate, UITextViewDelegate>
@@ -94,6 +95,14 @@ static const CGFloat kButtonBottom = -20;
 }
 
 - (void)makeConstraint {
+    // 针对4s 屏幕调整
+    if ([SDVersion deviceSize] == Screen3Dot5inch) {
+        kImageScale = 0.5;
+//        kDescriptiveTextFieldHeight = 30;
+        kButtonBottom = -10;
+    }
+    
+    
     [_sceneImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
         make.height.mas_equalTo(_sceneImageView.mas_width).multipliedBy(kImageScale);
