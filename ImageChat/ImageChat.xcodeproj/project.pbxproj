@@ -31,7 +31,6 @@
 		FD59BE481E2F8EE9006CF6A9 /* ICMeSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD59BE471E2F8EE9006CF6A9 /* ICMeSettingTableViewCell.m */; };
 		FD5C501B1E1A850B00AC2CB9 /* UIColor+ICHex.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */; };
 		FD5C50211E1AA75F00AC2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */; };
-		FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD5C501F1E1AA75F00AC2CB9 /* Info.plist */; };
 		FD5C50231E1AA75F00AC2CB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C50201E1AA75F00AC2CB9 /* main.m */; };
 		FD5C50261E1AA76700AC2CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5C50241E1AA76700AC2CB9 /* LaunchScreen.storyboard */; };
 		FD5C50291E1AA98300AC2CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C50281E1AA98300AC2CB9 /* Assets.xcassets */; };
@@ -49,6 +48,7 @@
 		FD6E813C1E309B4D00EAB25C /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81371E309B4D00EAB25C /* YYModel.framework */; };
 		FD6E813F1E30AC4900EAB25C /* ICMeLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */; };
 		FD6E81411E3102C300EAB25C /* SDVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81401E3102C300EAB25C /* SDVersion.framework */; };
+		FD6E81431E310DE200EAB25C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD6E81421E310DE200EAB25C /* Info.plist */; };
 		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
 		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
 		FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */; };
@@ -127,7 +127,6 @@
 		FD5C501A1E1A850B00AC2CB9 /* UIColor+ICHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ICHex.m"; sourceTree = "<group>"; };
 		FD5C501D1E1AA75F00AC2CB9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageChat/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageChat/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		FD5C501F1E1AA75F00AC2CB9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageChat/Info.plist; sourceTree = SOURCE_ROOT; };
 		FD5C50201E1AA75F00AC2CB9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageChat/main.m; sourceTree = SOURCE_ROOT; };
 		FD5C50251E1AA76700AC2CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ImageChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		FD5C50271E1AA7AE00AC2CB9 /* ImageChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageChat-Prefix.pch"; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		FD6E813D1E30AC4900EAB25C /* ICMeLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeLoginTextField.h; sourceTree = "<group>"; };
 		FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeLoginTextField.m; sourceTree = "<group>"; };
 		FD6E81401E3102C300EAB25C /* SDVersion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDVersion.framework; path = "Pods/../build/Debug-iphoneos/SDVersion/SDVersion.framework"; sourceTree = "<group>"; };
+		FD6E81421E310DE200EAB25C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7226E61E2DE61700AF842F /* ICSendImageMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageMainView.h; sourceTree = "<group>"; };
 		FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageMainView.m; sourceTree = "<group>"; };
 		FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImagePreviewView.h; sourceTree = "<group>"; };
@@ -479,11 +479,11 @@
 		FD5C501C1E1AA74F00AC2CB9 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				FD6E81421E310DE200EAB25C /* Info.plist */,
 				FD5C50281E1AA98300AC2CB9 /* Assets.xcassets */,
 				FD5C50241E1AA76700AC2CB9 /* LaunchScreen.storyboard */,
 				FD5C501D1E1AA75F00AC2CB9 /* AppDelegate.h */,
 				FD5C501E1E1AA75F00AC2CB9 /* AppDelegate.m */,
-				FD5C501F1E1AA75F00AC2CB9 /* Info.plist */,
 				FD5C50201E1AA75F00AC2CB9 /* main.m */,
 				FD5C50271E1AA7AE00AC2CB9 /* ImageChat-Prefix.pch */,
 			);
@@ -627,9 +627,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5C50221E1AA75F00AC2CB9 /* Info.plist in Resources */,
 				FD5C50291E1AA98300AC2CB9 /* Assets.xcassets in Resources */,
 				FD5C50261E1AA76700AC2CB9 /* LaunchScreen.storyboard in Resources */,
+				FD6E81431E310DE200EAB25C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
