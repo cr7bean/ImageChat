@@ -12,6 +12,7 @@
 #import "UIColor+ICHex.h"
 #import "UIViewController+ICTitleView.h"
 #import "ICMeSettingViewController.h"
+#import "ICMeLoginViewController.h"
 
 static NSString *const cellIentify = @"Cellidentity";
 static const NSUInteger kTextColor = 0x888888;
@@ -110,13 +111,57 @@ static const CGFloat kTextFontSize = 15;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0: {
+            [self sendedImage];
+            break;
+        }
+        case 1: {
+            [self collection];
+            break;
+        }
+        case 2: {
+            [self preference];
+            break;
+        }
+        case 3: {
+            [self invite];
+            break;
+        }
+    }
 }
+
+//TODO: <#TODO#>
+#pragma mark - Private Method
+
+- (void)sendedImage {
+    
+}
+
+- (void)collection {
+    
+}
+
+- (void)preference {
+    
+}
+
+- (void)invite {
+    
+}
+
+
+
+
+
+
 
 #pragma mark - ICMeTableHeadView Delegate
 
 //TODO: login
 - (void)ICMeTableHeadView:(ICMeTableHeadView *)headView buttonAction:(UIButton *)sender {
-    
+    ICMeLoginViewController *controller = [ICMeLoginViewController new];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

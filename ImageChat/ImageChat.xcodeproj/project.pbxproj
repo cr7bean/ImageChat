@@ -47,6 +47,7 @@
 		FD6E813A1E309B4D00EAB25C /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81351E309B4D00EAB25C /* MJRefresh.framework */; };
 		FD6E813B1E309B4D00EAB25C /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81361E309B4D00EAB25C /* SVProgressHUD.framework */; };
 		FD6E813C1E309B4D00EAB25C /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6E81371E309B4D00EAB25C /* YYModel.framework */; };
+		FD6E813F1E30AC4900EAB25C /* ICMeLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */; };
 		FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */; };
 		FD7226EB1E2DF61800AF842F /* ICSendImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226EA1E2DF61800AF842F /* ICSendImagePreviewView.m */; };
 		FD7226EE1E2E2F9300AF842F /* UIImage+ICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7226ED1E2E2F9300AF842F /* UIImage+ICHelper.m */; };
@@ -149,6 +150,8 @@
 		FD6E81351E309B4D00EAB25C /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "Pods/../build/Debug-iphoneos/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
 		FD6E81361E309B4D00EAB25C /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ImageChat-hcfylhcpciugpjdphapugitkktml/Build/Products/Debug-iphonesimulator/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		FD6E81371E309B4D00EAB25C /* YYModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYModel.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ImageChat-hcfylhcpciugpjdphapugitkktml/Build/Products/Debug-iphonesimulator/YYModel/YYModel.framework"; sourceTree = "<group>"; };
+		FD6E813D1E30AC4900EAB25C /* ICMeLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMeLoginTextField.h; sourceTree = "<group>"; };
+		FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMeLoginTextField.m; sourceTree = "<group>"; };
 		FD7226E61E2DE61700AF842F /* ICSendImageMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImageMainView.h; sourceTree = "<group>"; };
 		FD7226E71E2DE61700AF842F /* ICSendImageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSendImageMainView.m; sourceTree = "<group>"; };
 		FD7226E91E2DF61800AF842F /* ICSendImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSendImagePreviewView.h; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				FD59BE411E2F46FB006CF6A9 /* ICMeTableHeadView.m */,
 				FD59BE461E2F8EE9006CF6A9 /* ICMeSettingTableViewCell.h */,
 				FD59BE471E2F8EE9006CF6A9 /* ICMeSettingTableViewCell.m */,
+				FD6E813D1E30AC4900EAB25C /* ICMeLoginTextField.h */,
+				FD6E813E1E30AC4900EAB25C /* ICMeLoginTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				FD57D28A1E27564E009F0E96 /* UIButton+ICHelper.m in Sources */,
 				FD66088B1E1D09130035D03E /* ICImageCardModel.m in Sources */,
 				FD579E521E1E259200E27045 /* ICImageInfoMenuButton.m in Sources */,
+				FD6E813F1E30AC4900EAB25C /* ICMeLoginTextField.m in Sources */,
 				FD7226E81E2DE61700AF842F /* ICSendImageMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

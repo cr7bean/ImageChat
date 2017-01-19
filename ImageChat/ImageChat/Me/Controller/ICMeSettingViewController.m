@@ -9,6 +9,7 @@
 @import Masonry;
 #import "ICMeSettingViewController.h"
 #import "ICMeSettingTableViewCell.h"
+#import "ICMeFeedbackViewController.h"
 
 static NSString *const cellIdentify = @"cellIdentify";
 
@@ -60,6 +61,8 @@ static NSString *const cellIdentify = @"cellIdentify";
 
 #pragma mark - UITableView Delegate
 
+//TODO: <#TODO#>
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
@@ -84,11 +87,20 @@ static NSString *const cellIdentify = @"cellIdentify";
 #pragma mark - Priviate Method
 
 - (void)modifyUserName {
-    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"请输入新昵称" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        DDLogDebug(@"new user name: %@", controller.textFields.firstObject.text);
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [controller addTextFieldWithConfigurationHandler:nil];
+    [controller addAction:confirmAction];
+    [controller addAction:cancelAction];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)feedback {
-    
+    ICMeFeedbackViewController *controller = [ICMeFeedbackViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)clearCache {
