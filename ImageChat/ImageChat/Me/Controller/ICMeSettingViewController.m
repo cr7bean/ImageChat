@@ -102,9 +102,16 @@ static NSString *const cellIdentify = @"cellIdentify";
     ICMeFeedbackViewController *controller = [ICMeFeedbackViewController new];
     [self.navigationController pushViewController:controller animated:YES];
 }
-
+//TODO: <#TODO#>
 - (void)clearCache {
-    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确认清除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [controller addAction:confirmAction];
+    [controller addAction:cancelAction];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 
