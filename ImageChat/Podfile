@@ -10,5 +10,5 @@ pod 'GVUserDefaults', '~> 1.0.2'
 pod 'SVProgressHUD', '~> 2.0.3'
 pod 'FMDB', '~> 2.6.2'
 pod 'YYModel', '~> 1.0.4’
-#pod 'MJRefresh', '~> 3.1.12’
+pod 'MJRefresh', '~> 3.1.12’
 end

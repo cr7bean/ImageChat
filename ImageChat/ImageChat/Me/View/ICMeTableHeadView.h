@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class ICMeTableHeadView;
+@protocol ICMeTableHeadViewDelegate <NSObject>
+
+- (void)ICMeTableHeadView:(ICMeTableHeadView*)headView buttonAction:(UIButton*)sender;
+
+@end
+
 @interface ICMeTableHeadView : UIView
 
+@property (nonatomic, weak) id<ICMeTableHeadViewDelegate> delegate;
 - (void)switchToLoginState;
 
 @end

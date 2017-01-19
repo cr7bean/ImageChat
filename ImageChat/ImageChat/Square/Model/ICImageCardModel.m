@@ -8,6 +8,10 @@
 
 #import "ICImageCardModel.h"
 
+@implementation ICImageCardListModel
+
+@end
+
 @implementation ICImageCardModel
 
 @end

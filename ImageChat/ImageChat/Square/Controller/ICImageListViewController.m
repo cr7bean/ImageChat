@@ -7,11 +7,15 @@
 //
 
 @import Masonry;
+@import MJRefresh;
+@import YYModel;
 #import "ICImageListViewController.h"
 #import "ICImageCardTableViewCell.h"
 #import "UIColor+ICHex.h"
 #import "UIViewController+ICTitleView.h"
 #import "ICImageInfoViewController.h"
+#import "ICNetworkManager.h"
+#import "ICImageCardModel.h"
 
 static NSString *cellIdentify = @"imageCardCell";
 static NSString *kTitle = @"热门";
@@ -22,7 +26,7 @@ static const CGFloat kRowHeight = 130;
 @interface ICImageListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) ICImageCardListModel *cardListModel;
 @end
 
 @implementation ICImageListViewController
@@ -37,6 +41,23 @@ static const CGFloat kRowHeight = 130;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Refresh and network
+
+/**
+ *  利用本地服务器，给定的 URL 访问不了。数据暂时用固定的数据
+ */
+- (void)requestImageCardList {
+    NSString *URLString = @"/photolist";
+    NSDictionary *parameters = @{@"limit": @20,
+                                 @"offset": @0};
+    [[ICNetworkManager sharedManager] ic_POST:URLString parameters:parameters success:^(id response) {
+        self.cardListModel = [ICImageCardListModel yy_modelWithJSON:(response[@"data"])];
+        DDLogDebug(@"Image card list request success");
+    } failure:^(NSError *error) {
+        DDLogDebug(@"Image card list request fail with reason: %@", error.description);
+    }];
 }
 
 #pragma mark - Getter

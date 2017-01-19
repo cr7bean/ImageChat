@@ -11,18 +11,20 @@
 #import "ICMeTableHeadView.h"
 #import "UIColor+ICHex.h"
 #import "UIViewController+ICTitleView.h"
+#import "ICMeSettingViewController.h"
 
 static NSString *const cellIentify = @"Cellidentity";
 static const NSUInteger kTextColor = 0x888888;
 static const NSUInteger kLineViewColor = 0x979797;
 static const CGFloat kTextFontSize = 15;
 
-@interface ICMeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ICMeViewController ()<UITableViewDelegate, UITableViewDataSource, ICMeTableHeadViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) ICMeTableHeadView *headView;
 @property (nonatomic, copy) NSArray *titles;
 @property (nonatomic, strong) NSArray *images;
+@property (nonatomic, assign, getter=isLogin) BOOL login;
 
 @end
 
@@ -47,9 +49,9 @@ static const CGFloat kTextFontSize = 15;
                     [UIImage imageNamed:@"me_friend"]];
     [self ic_titleViewWithText:@"我的"];
     self.headView = [ICMeTableHeadView new];
+    self.headView.delegate = self;
     self.tableView.tableHeaderView = self.headView;
-    
-    [self.headView switchToLoginState];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"me_setting"] style:UIBarButtonItemStylePlain target:self action:@selector(settingAction)];
 }
 
 #pragma mark - Getter
@@ -93,10 +95,28 @@ static const CGFloat kTextFontSize = 15;
     return cell;
 }
 
+#pragma mark - Button Action
+
+- (void)settingAction {
+    ICMeSettingViewController *controller = [[ICMeSettingViewController alloc] initWithUserName:@"WXY"];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+
+
+
 #pragma mark UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - ICMeTableHeadView Delegate
+
+//TODO: login
+- (void)ICMeTableHeadView:(ICMeTableHeadView *)headView buttonAction:(UIButton *)sender {
+    
 }
 
 @end

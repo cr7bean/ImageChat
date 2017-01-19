@@ -61,6 +61,7 @@ static const CGFloat kLabelTop = 15;
     [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.loginButton.titleLabel.font = [UIFont systemFontOfSize:kButtonFontSize];
     [self.loginButton setBackgroundImage:[UIImage imageNamed:@"login_button"] forState:UIControlStateNormal];
+    [self.loginButton addTarget:self action:@selector(loginButtonAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.loginBlankView.backgroundColor = [UIColor whiteColor];
     self.avatarImageView.image = [UIImage imageNamed:@"login_avatar"];
@@ -96,6 +97,12 @@ static const CGFloat kLabelTop = 15;
     self.loginBlankView.hidden = NO;
     self.loginButton.hidden = YES;
 }
+
+- (void)loginButtonAction {
+    [self.delegate ICMeTableHeadView:self buttonAction:self.loginButton];
+}
+
+
 
 
 @end
